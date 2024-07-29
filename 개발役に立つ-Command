@@ -1,0 +1,25 @@
+# 안드로이드 개발 관련 Command
+
+- ApkTool 디컴파일
+java -jar apktool.jar d 디컴파일할 파일 이름.apk
+ 
+- ApkTool 리패키징
+java -jar apktool.jar b 디컴파일한 apk 폴더 Path -o 리패키징할 파일 이름.apk
+ 
+- SignApk 서명
+java -jar signapk.jar 서명키.pem 서명키.pk8 리패키징.apk 서명된 리패키징 이름.apk
+
+- Gradle 디펜던시 refresh
+./gradlew --refresh-dependencies
+
+
+
+
+
+
+
+
+
+
+
+
