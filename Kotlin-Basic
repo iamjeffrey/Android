@@ -1,1 +1,42 @@
+- Kotlin Optional binding iOS guard 처럼 구현해보기 Sample
+# 방법 1)
+func checkUsernameValid(username: String?): Bool {
+    guard let username else {
+        // username is nil, can't evaluate
+        return false
+    }
+    // username can be used non-optional
+    return username.count > 3
+}
+
+# 방법 1 대신 다른 구현 방법 2가지 Sample
+# 방법 2-1)
+fun checkUsernameValid(username: String?): Boolean {
+    if (username.isNullOrEmpty()){
+        return false
+    }
+    return username.length > 3
+}
+
+# 방법 2-2)
+fun checkUsernameValid(username: String?): Boolean {
+    val actualUsername = username ?: return false
+    return actualUsername.length > 3
+}
+
+- Extension functions 
+fun String.doubled(): String {
+    return this + this
+}
+
+val originalStr = "Kotlin Extension "
+val doubledStr = originalStr.doubled()
+println(doubledStr) // -> prints "Kotlin Extension Kotlin Extension "
+
+
+
+
+
+
+
 
