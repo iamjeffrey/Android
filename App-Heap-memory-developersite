@@ -2,6 +2,17 @@
 # 안드로이드 App heap memory size 제한 관련한 내용 안드로이드 개발 문서 사이트
 # 가끔씩 필요!, 왜? 안드로이드는 iOS 처럼 큰 Blob가 안되냐 증명해라 하는 피곤하게 하는 빅 마우스들의 답변용으로
 
+Logcat 에러 출력 로그
+     Failed to allocate a 148508352 byte allocation with 25165824 free bytes and 38MB until OOM, 
+     target footprint 253232720, growth limit 268435456" (VmSize 36617500 kB)
+
+     java.lang.OutOfMemoryError:
+      Failed to allocate a 148508352 byte allocation with 25165824 free bytes 
+      and 38MB until OOM, target footprint 253232720, growth limit 268435456
+
+     -> App Heap 메모리 부족으로 JVM(Java Virtual Machine)이 객체를 할당할 수 없고 
+        가비지 Collector에서 더 이상 사용 가능한 메모리 없을 때 발생한다는 뭐.. 그런 의미 
+
 구글 개발 문서 레퍼런스 
 - 안드로이드 앱 애플리케이션 Heap size 제한 설명
 https://developer.android.com/topic/performance/memory-overview
