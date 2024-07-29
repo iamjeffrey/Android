@@ -20,7 +20,7 @@ adb logcat *:S ReactNative:V ReactNativeJS:V
 
 - Package list
 adb shell pm list packages
-adb shell pm path  package이름(com.my.packageapp)
+adb shell pm path package이름(com.my.packageapp)
 
 - App links
 adb shell pm get-app-links package이름(com.my.packageapp)
@@ -31,19 +31,22 @@ adb shell am start -W -a android.intent.action.VIEW -d " package이름(com.my.pa
 - 인텐트 강제 호출
 adb shell am start -a android.intent.action.MAIN -n package명/액티비티 경로명
 
-- 현재 Activity 확인
-$ adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'
-
 - Emulator
 adb shell emulator -list-avds
 
-- 사용설정 및 사용 중지 확인 Platform 
+- 현재 Activity dump 확인
+$ adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'
+
+- 사용설정 및 사용 중지 확인 Platform dump 
 # https://developer.android.com/guide/app-compatibility/test-debug
 adb shell dumpsys platform_compat
 
 - Memory dump
 adb shell dumpsys -l
 adb shell dumpsys meminfo package명 | pid [-d]
+
+- 배터리 Dump dumpsys <service 이름>
+adb shell dumpsys battery
 
 - 현재 Runtime app heapsize
 adb shell getprop dalvik.vm.heapsize
@@ -57,6 +60,11 @@ adb push stressapptest /data/local/tmp/
 adb shell chmod 777 /data/local/tmp/stressapptest
 adb shell /data/local/tmp/stressapptest -s 20 -M 990
 
+- input 현재 active TextField
+adb shell input text "Input current active text"
+
+- 기기 화면 Taps
+adb shell input tap 800 1200
 
 
 
