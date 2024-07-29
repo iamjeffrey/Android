@@ -1,5 +1,7 @@
 # 자주 쓰는 adb command
-# Most complete ADB command 役に立つ　사이트 -> https://dev.to/larsonzhong/most-complete-adb-commands-4pcg
+# Most complete ADB command 役に立つ　사이트 
+#        https://dev.to/larsonzhong/most-complete-adb-commands-4pcg
+#        https://gist.github.com/Pulimet/5013acf2cd5b28e55036c82c91bd56d8?permalink_comment_id=3731408
 
 adb shell input keyevent 82
 
