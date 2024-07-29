@@ -1,0 +1,64 @@
+# 자주 쓰는 adb command
+# Most complete ADB command 役に立つ　사이트 -> https://dev.to/larsonzhong/most-complete-adb-commands-4pcg
+
+adb shell input keyevent 82
+
+- adb 네트워크 로그를 DPC에서 로깅 가능하게 강제, over API 28(9.0)
+# https://developer.android.com/work/dpc/logging
+adb shell dpm force-network-logs
+
+- Runtime app logcat
+adb shell logcat AndroidRuntime:E *:S
+
+- RN logcat
+adb logcat *:S ReactNative:V ReactNativeJS:V
+
+- Chrome devtools remote forwarding chrome://inspect/#devices
+ adb forward tcp:9222 localabstract:chrome_devtools_remote
+
+- Package list
+adb shell pm list packages
+adb shell pm path  package이름(com.my.packageapp)
+
+- App links
+adb shell pm get-app-links package이름(com.my.packageapp)
+
+- Open app schemes
+adb shell am start -W -a android.intent.action.VIEW -d " package이름(com.my.packageapp)//appscheme"
+
+- 인텐트 강제 호출
+adb shell am start -a android.intent.action.MAIN -n package명/액티비티 경로명
+
+- 현재 Activity 확인
+$ adb shell dumpsys window windows | grep -E 'mCurrentFocus|mFocusedApp'
+
+- Emulator
+adb shell emulator -list-avds
+
+- 사용설정 및 사용 중지 확인 Platform 
+# https://developer.android.com/guide/app-compatibility/test-debug
+adb shell dumpsys platform_compat
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
