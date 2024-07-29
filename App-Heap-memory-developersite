@@ -1,0 +1,28 @@
+# App heap memory size 안드로이드 development document site
+# 안드로이드 App heap memory size 제한 관련한 내용 안드로이드 개발 문서 사이트
+# 가끔씩 필요!, 왜? 안드로이드는 iOS 처럼 큰 Blob가 안되냐 증명해라 하는 피곤하게 하는 빅 마우스들의 답변용으로
+
+구글 개발 문서 레퍼런스 
+- 안드로이드 앱 애플리케이션 Heap size 제한 설명
+https://developer.android.com/topic/performance/memory-overview
+     -- Allocate and reclaim app memory
+          The Dalvik heap is constrained to a single virtual memory range for each app process. 
+          This defines the logical heap size, which can grow as it needs to but only up to a limit that the system defines for each app.
+ 
+- getMemoryClass API 메소드 설명
+https://developer.android.com/reference/android/app/ActivityManager
+      -- getMemoryClass
+            Return the approximate per-application memory class of the current device. 
+            This gives you an idea of how hard a memory limit you should impose on your application 
+            to let the overall system work best. The returned value is in megabytes; 
+            the baseline Android memory class is 16 (which happens to be the Java heap limit of those devices); 
+            some devices with more memory may return 24 or even higher numbers.
+ 
+- JVM Runtime maxMemory API 메소드 설명
+https://developer.android.com/reference/java/lang/Runtime#maxMemory()
+      --  maxMemory
+             Returns the maximum amount of memory that the Java virtual machine will attempt to use.
+             If there is no inherent limit then the value Long.MAX_VALUE will be returned.
+ 
+
+
