@@ -66,6 +66,18 @@ adb shell input text "Input current active text"
 - 기기 화면 Taps
 adb shell input tap 800 1200
 
+- Crash log adb logcat
+adb shell ps -A | grep 패키지명
+ -> PID 값 리스트
+adb shell logcat --pid <위에서 찾은 PID>
+ -> --------- beginning of system 
+    ... LOG ...
+
+
+
+
+
+
 
 
 
