@@ -1,5 +1,8 @@
 # 안드로이드 개발 관련 Command
 
+- 서명키 Signing 확인 (-print-certs 서명인증서 정보, -v 상세출력, 서명 Schema 정보)
+apksigner verify -print-certs -v 서명된APK.apk
+
 - ApkTool 디컴파일
 java -jar apktool.jar d 디컴파일할 파일 이름.apk
  
