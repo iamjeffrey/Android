@@ -11,7 +11,7 @@ Free-form : 크기 자유 조정 가능, 제조업체 별 설정 재정의
 앱 전체화면 전환 가능
   resizeableActivity=false <- 앱 전체화면 전환 가능 Off, 기기/제조사 별 상이, 하드웨어 자원의 경우 동작 보장 못함
   target 31 이상인 경우 화면 큰화면(>=6oodp), 작은화면(<600dp) 다르게 작동, 제조사별 상이
-https://developer.android.com/guide/topics/manifest/application-element?hl=ko&_gl=1*9m9mlg*_up*MQ..*_ga*NjcyNzY1Mi4xNzI1NTEwNjA2*_ga_6HH9YJMN9M*MTcyNTUxMDYwNi4xLjAuMTcyNTUxMDYwNi4wLjAuMA..#resizeableActivity
+https://developer.android.com/guide/topics/manifest/activity-element
 
 12 ~
 앱이 인텐트를 통해 콘텐츠 접근, FLAG_ACTIVITY_LAUNCH_ADJACENT
