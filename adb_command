@@ -73,7 +73,20 @@ adb shell logcat --pid <위에서 찾은 PID>
  -> --------- beginning of system 
     ... LOG ...
 
+# Android Studio 'Emulator is already running' 
+- WINDOWS 
+  taskkill /F /IM qemu-system-x86_64.exe /T
 
+- Mac
+  에뮬레이터 프로세스 한번에 종료
+  pkill -9 -f qemu
+
+  특정 포트번호 종료
+  lsof -i tcp:5554 | awk 'NR!=1 {print $2}' | xargs kill -9
+
+  프로세스 id 확인하고 개별 종료
+   ps aux | grep -i qemu
+   kill -9 <PID>
 
 
 
